@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --main-color: #2b4570;
+    --black: #333;
+    --color-primary: #0d42ff;
+    --white: #fff;
+    --btn-color: #4BB3E2;
+    --color-default: #0a0d13;
+    --color-secondary: #0e1d34;
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+
+.align {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 3.1rem;
+}
+
+header {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-size: cover;
+    background-color: #0e1d34;
+    opacity: 1;
+}
+
+.navbar {
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 100;
+    margin-left: -10px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.button {
+    background-color: #0d42ff;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+}
+
+#check {
+    display: none;
+}
+
+.navlinks {
+    align-items: center;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    padding: 5px 18px;
+    position: relative;
+
+}
+
+.navbar ul li a {
+    color: #979ea7;
+    text-decoration: none;
+    font-size: 15.5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.navbar ul li a {
+    color: #979ea7;
+}
+
+.navbar ul li .text {
+    color: #ffffff;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu ul li a {
+    color: black;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #1548ff;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    background: #ffffff;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.navbar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.navbar ul li:hover .dropdown-menu ul li {
+    width: 168px;
+    padding: 10px;
+    background: transparent;
+    text-align: left;
+}
+
+.dropdown-menu-1 {
+    display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 173px;
+    top: 1px;
+    background-color: var(--color-black);
+    background: #ffffff;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 ul li {
+    width: 160px;
+    padding: 7px;
+    background: transparent;
+    text-align: center;
+    font-size: 20px;
+}
+
+.checkbtn {
+    color: #ffffff;
+    font-size: 24px;
+    padding: 4px 7px 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media only screen and (min-width:250px) and (max-width:991px) {
+
+    .navbar .navlinks {
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .logo {
+        font-size: 25.9px;
+        margin-left: 0px;
+    }
+
+    .button {
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+    }
+
+    .navlinks li {
+        background-color: #0e1d34;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        opacity: 0.9;
+    }
+
+    .navbar ul li {
+        padding: 13px 20px;
+
+    }
+
+    .navlinks li a {
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    .navlinks li:hover a {
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    #check:checked~.navlinks {
+        display: flex;
+    }
+
+    .navbar ul li:hover .dropdown-menu {
+        display: block;
+        position: relative;
+        left: 0;
+        margin-top: 30px;
+        border: 1px solid #183057;
+        background: #0e1d34;
+        margin-left: -30%;
+        border-radius: 1px;
+    }
+
+    .navbar ul li:hover .dropdown-menu ul li a {
+        color: #979ea7;
+        font-size: 15px;
+    }
+
+    .navbar ul li:hover .dropdown-menu ul li a:hover {
+        color: #fff;
+    }
+
+    .navbar ul li:hover .dropdown-menu ul li {
+        width: 280px;
+        padding: 10px;
+        background: transparent;
+        text-align: left;
+    }
+
+    .dropdown-menu ul li:hover .dropdown-menu-1 {
+        display: block;
+        position: relative;
+        margin-left: -70%;
+        margin-top: 10%;
+        background-color: var(--color-black);
+        background: #0e1d34;
+        border-radius: 1px;
+        border: 1px solid #183057;
+    }
+
+    .dropdown-menu ul li:hover .dropdown-menu-1 ul li {
+        width: 260px;
+        padding: 7px;
+        background: transparent;
+        text-align: center;
+    }
+
+    .fas {
+        float: right;
+        position: absolute;
+        margin-top: 5px;
+        display: flex;
+        margin-left: 75%;
+        color: #979ea7;
+    }
+
+    .navbar ul li .tec {
+        position: absolute;
+        padding-top: -1%;
+    }
+
+    .navbar ul li .tec-2 {
+        margin-top: 20px;
+    }
+
+    .navbar ul li:hover .dropdown-menu ul li a:hover {
+        color: var(--white);
+    }
+
+}
